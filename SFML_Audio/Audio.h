@@ -37,12 +37,16 @@ class Audio
 	AudioType audioType;
 	sf::Music music;
 	sf::SoundBuffer sfxBuffer;
-	sf::Sound sfx;	
+	sf::Sound sfx;
+
 public:
 	Audio(AudioType audioType);
 	void load(const char* filePath);
 	void play();
-	//stop
-	//set volume
+	void pause();
+	void stop();
+	void setVolume(float volume);
+	float getVolume();
+	void setPitch(float pitch);
+	float getPitch();
 };
-
